@@ -1,10 +1,22 @@
 // Preset values
 const FROGS = 3;
+const orderedList = document.getElementById("track");
 
-// 1. Create for loop that makes use of FROGS to know how many lanes to create.
+for (i = 1; i <= FROGS; i++) {
+  let lane = document.createElement("li");
+  orderedList.appendChild(lane);
 
-// 2. Create li
+  let laneNumber = document.createElement("span");
+  laneNumber.innerText = i;
+  lane.appendChild(laneNumber);
 
-// 3. Create span and add it to the li
+  lane.id = "frog " + i;
+}
 
-// 4. Assign an id to each lane
+const racers = [];
+
+for (let x = 0; x < FROGS; x++) {
+  racers.push(frogStable[x]);
+}
+
+console.log(racers);
