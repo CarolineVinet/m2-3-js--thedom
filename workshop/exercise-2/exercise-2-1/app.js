@@ -1,8 +1,10 @@
 const FROGS = 3;
 const track = document.getElementById("track");
+
 let progressContainer = document.createElement("div");
 const main = document.querySelector("main");
 main.appendChild(progressContainer);
+
 for (let i = 0; i < FROGS; i++) {
   let lane = document.createElement("li");
   track.appendChild(lane);
