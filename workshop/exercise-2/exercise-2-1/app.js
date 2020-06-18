@@ -22,7 +22,7 @@ racers.forEach(function (racer, index) {
   let frog = document.createElement("span");
   frog.classList.add("frog");
   frog.style.backgroundColor = racer.color;
-  frog.innerText = "frog" + index;
+  frog.innerText = racer.number;
   frog.progress = 0;
   let progressSpan = document.createElement("span");
   progressSpan.id = "lane-progress-" + index;
@@ -30,3 +30,11 @@ racers.forEach(function (racer, index) {
   progressContainer.appendChild(progressSpan);
   lane.appendChild(frog);
 });
+
+function racingFrog(racerObj) {
+  Math.floor(Math.random() * 10);
+}
+
+setInterval(function () {
+  racingFrog();
+}, 3000);
